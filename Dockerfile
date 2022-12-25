@@ -1,4 +1,4 @@
-FROM rockylinux:9.0
+FROM rockylinux:9.1
 
 # Execution user name after container startup
 ARG USER_NAME
