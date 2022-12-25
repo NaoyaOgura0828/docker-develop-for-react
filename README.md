@@ -4,7 +4,7 @@ DockerでReact開発環境を構築する。
 <br>
 
 # Requirement
-Fedora36ローカル環境で実行確認済。
+Fedora37ローカル環境で実行確認済。
 <br>
 VSCodeとVSCode拡張機能をInstallする。
 - VS Code
