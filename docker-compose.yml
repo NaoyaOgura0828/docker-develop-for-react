@@ -19,3 +19,6 @@ services:
 volumes:
   home:
     name: ${VOLUME_NAME}
+networks:
+  default:
+    name: ${NETWORK_NAME}
