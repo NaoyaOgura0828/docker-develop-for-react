@@ -10,6 +10,7 @@ services:
       args:
         - DOCKER_IMAGE_TAG=${DOCKER_IMAGE_TAG}
         - USER_NAME=${USER_NAME}
+        - NODEJS_MAJOR_VERSION=${NODEJS_MAJOR_VERSION}
     volumes:
       - home:/home
     user: ${USER_NAME}

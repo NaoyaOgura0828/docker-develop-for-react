@@ -83,6 +83,15 @@ NETWORK_NAME = ${ネットワーク名}
 
 <br>
 
+## nodejs Major Versionの設定(Optional)
+[.env](./.env)内の`NODEJS_MAJOR_VERSION`を任意の[nodejs Major Version](https://nodejs.org/en/about/previous-releases)に設定する。
+
+```
+NODEJS_MAJOR_VERSION = ${nodejs Major Version}
+```
+
+<br>
+
 # Usage
 
 ## コンテナ実行
@@ -110,5 +119,44 @@ docker compose up -d --build
 3. 右側に表示される`新しいウィンドウでアタッチする`を押下する。
 
 <img src='images/RemoteDevelopment_AttachNewWindow.png'>
+
+<br>
+
+# Demo
+## Project 作成
+Container環境で下記コマンドを実行する。
+
+```bash
+$ yarn create react-app testapp
+```
+
+> [!NOTE]
+> Demoでは`testapp`としているが、Application名は任意の名称で良い。
+
+<br>
+
+## Application 実行
+1. 実行<br>
+Container環境で下記コマンドを実行する。
+
+```bash
+$ cd testapp
+$ yarn start
+
+Compiled successfully!
+
+You can now view testapp in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://172.28.0.2:3000
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+webpack compiled successfully
+```
+
+2. 動作確認<br>
+HostのBrowserで[http://localhost:3000](http://localhost:3000)へアクセスし、動作確認を実施する。
 
 <br>
